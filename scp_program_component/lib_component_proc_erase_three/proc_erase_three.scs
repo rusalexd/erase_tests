@@ -1,0 +1,92 @@
+scp_program -> proc_erase_three 
+	(*	
+	-> rrel_params: ... 
+		(*
+		-> rrel_1: rrel_in: _param;;
+		*);;
+	
+	-> rrel_operators: ... 
+		(*	
+		-> rrel_init:proc_erase_three_operator1
+			(*
+			<- searchSetStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _param;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _next_node;;
+		
+			->rrel_set_3: rrel_assign: rrel_scp_var: _next_nodes;;
+
+			=> nrel_then: proc_erase_three_operator2;;
+			=> nrel_else: proc_erase_three_operator_return;;
+			*);;
+
+		-> proc_erase_three_operator2
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _next_nodes;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _next_node1;;
+		
+			=> nrel_then: proc_erase_three_operator3;;
+			=> nrel_else: proc_erase_three_operator5;;
+			*);;
+
+		-> proc_erase_three_operator3
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _arc;;
+
+			=> nrel_goto: proc_erase_three_operator4;;
+			*);;
+
+		-> proc_erase_three_operator4
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _next_node1;;
+
+			=> nrel_goto: proc_erase_three_operator_print;;
+			*);;
+
+		-> proc_erase_three_operator_print
+			(*
+			<- printNl;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: [STOP POINT];;
+
+			=> nrel_goto: proc_erase_three_operator2;;
+			*);;
+
+		-> proc_erase_three_operator5
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _next_nodes;;
+
+			=> nrel_goto: proc_erase_three_operator_return;;
+			*);;
+
+		->  proc_erase_three_operator_return 
+			(*
+			<- return;;
+			*);;
+		*);;
+	*);;
+
+proc_erase_three_operator1 => nrel_main_idtf: [Оператор номер 1 программы удаления элементов множества] (*<-lang_ru;;*);;
+proc_erase_three_operator2 => nrel_main_idtf: [Оператор номер 2 программы удаления элементов множества] (*<-lang_ru;;*);;
+proc_erase_three_operator3 => nrel_main_idtf: [Оператор номер 3 программы удаления элементов множества] (*<-lang_ru;;*);;
+proc_erase_three_operator4 => nrel_main_idtf: [Оператор номер 4 программы удаления элементов множества] (*<-lang_ru;;*);;
+proc_erase_three_operator5 => nrel_main_idtf: [Оператор номер 5 программы удаления элементов множества] (*<-lang_ru;;*);;
+proc_erase_three_operator_print => nrel_main_idtf: [Оператор print программы удаления элементов множества] (*<-lang_ru;;*);;
+proc_erase_three_operator_return => nrel_main_idtf: [Оператор выхода из программы удаления элементов множества] (*<-lang_ru;;*);;
+
+proc_erase_three
+=> nrel_main_idtf:
+	[Программа удаления всех элементов множества]
+	(* <- lang_ru;; *);;
+
+

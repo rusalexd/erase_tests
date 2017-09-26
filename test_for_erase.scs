@@ -1,0 +1,7 @@
+test_set_fe => nrel_main_idtf: [Тестовое множество] (*<-lang_ru;;*);;
+test_set_fe 
+-> element_1;
+-> element_2;
+-> element_3;
+-> element_4;
+-> element_5;;

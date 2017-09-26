@@ -1,0 +1,12 @@
+lib_component_proc_erase_three
+=> nrel_main_idtf:
+	[Компонент библиотеки. scp-программа удаления всех элементов множества]
+	(* <- lang_ru;; *);
+	[Library component. scp-program of erasing all elems of set]
+	(* <- lang_en;; *);
+
+<- platform_independent_reusable_component_OSTIS;
+<- reusable_scp_program;
+
+-> rrel_key_sc_element: 
+	proc_erase_three;;
